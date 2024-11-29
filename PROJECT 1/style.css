@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+/* code for the navigation bar */
+
+.nav-container {
+    width: 97%;
+    margin: 10px auto 50px auto;
+}
+.nav-items {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.nav-items .items {
+    margin: 10px;
+
+}
+.nav-items .logo-item {
+    margin-right: auto;
+}
+.nav-items li img {
+    width: 15em;
+    height: auto;
+}
+.small-logo {
+    width: 12em;
+    display: none;
+    margin-right: auto;
+    margin-left: 10px;
+}
+.small-logo a {
+    width: 100%;
+}
+.small-logo a img {
+    width: 100%;
+}
+
+.about-container, .gallery-container {
+    position: relative;
+}
+.about-items, .gallery-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    position: absolute;
+    display: none;
+}
+.about-items div, .gallery-items div {
+    margin: 0 0 5px 0 ;
+}
+.items a {
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+    text-wrap: nowrap;
+}
+.items a:hover {
+    color: black;
+}
+.items button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background-color: rgb(0, 165, 0);
+    font-size: 1em;
+}
+.donate-button {
+    padding-top: 0.3em;
+}
+.items button:hover {
+    background-color: green;
+}
+.about-container:hover .about-items, .gallery-container:hover .gallery-items {
+    display: block;
+}
+
+.side-bar-container {
+    background-color: rgb(43, 255, 15);
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+    overflow: auto;
+    margin-top: 0;
+    padding-top: 5em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+
+}
+
+.side-items {
+    padding: 10px;
+    margin: 0.5em;
+    width: 100%;
+    text-align: center;
+    text-wrap: nowrap;
+    display: block;
+}
+.side-items:hover {
+    background-color: rgb(27, 235, 0);
+}
+.side-items a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+
+}
+
+.menu-button, .close-button {
+    cursor: pointer;
+    display: none;
+    z-index: 3;
+    position: absolute;
+    right: 3.4%;
+}
+
+
+
+/* -------------------------------------------------------------------*/
+
+.main-content {
+    width: 95%;
+    margin: 0 auto 0 auto;
+}
+.welmsg {
+    text-align: center;
+}
+.welmsg hr {
+    width: 100px;
+    color: rgb(0, 219, 0);
+    border: 2px solid rgb(0, 219, 0);
+}
+.welmsg h1, .welmsg h3 {
+    margin: 0;
+}
+
+/* slide show code */
+
+.slideshow-container {
+    position: relative;
+    height: 91vh;
+    overflow: hidden;
+    
+
+  }
+.slideshow-container h1 {
+    text-align: center;
+}
+.slideshow-container hr {
+    width: 50%;
+    color: rgb(0, 255, 0);
+}
+  .simage {
+    height: 100%;
+    overflow: hidden;
+    position: relative; /* Add this */
+  }
+  
+  .simage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+  }
+  
+  /* Update the navigation arrow styles */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Add this to ensure the arrows are on top of the images */
+  }
+  
+  .prev {
+    left: 2%; /* Adjust this value to move the left arrow inside the slideshow container */
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 2%; /* Adjust this value to move the right arrow inside the slideshow container */
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .prev:hover, .next:hover {
+    transition: background-color 1s;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+
+/* the part below the slides */
+
+
+.discover {
+    width: 94%;
+    margin: auto;
+}
+.discover .dshr {
+    color: rgb(0, 199, 0);
+    border: 2px solid rgb(0, 199, 0);
+}
+.dicontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dfirst, .dsecond {
+    width: 48%;
+}
+.dshr2 {
+    border: 0.3px dotted black;
+}
+
+/* the code for the teachers and students images */
+
+
+
+.image-container {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3.5em;
+}
+.sub-container {
+    width: 47%;
+    margin: 10px;
+}
+.image-teme {
+    width: 100%;
+    position: relative;
+
+}
+.image-teme img {
+    width: 100%;
+}
+.image-teme h2 {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* number of students part */
+
+.no-container {
+    width: 100%;
+}
+.no-container-2 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.rec {
+    margin: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 2em 1.5;
+    width: 30%;
+    border-radius: 5px;
+}
+.rec svg {
+    margin-left: 1.5em;
+}
+.rec-sub {
+    margin-left:  10px;
+}
+.rec-sub h3, .rec-sub p {
+    margin: 0;
+    text-wrap: nowrap;
+}
+
+
+
+/* news and recent events */
+
+.news {
+    clear: both;
+    margin-top: 5em;
+    clear: both;
+}
+.news>h1, .news>h5 {
+    text-align: center;
+
+}
+.news>h1 {
+    margin-bottom: 0;
+}
+.news>h5 {
+    margin-top: 0;
+}
+.news hr {
+    width: 40%;
+    border: 2px solid green;
+    color: green;
+}
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 10em;
+
+}
+.news-container .box {
+    width: 32%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto 5px auto;
+    overflow: hidden;
+}
+.box img {
+    width: 100%;
+}
+.box p, .box h1 {
+    position: relative;
+    left: 10px;
+}
+.box h1 {
+    margin: 6px;
+}
+.box p {
+    margin: 0 0 0 10px;
+}
+.box h5 {
+    margin: 0;
+    position: relative;
+    top: 2px;
+    left: 10px;
+    text-decoration:underline;
+}
+
+/* footer */
+
+footer {
+    padding-top: 3em;
+    margin: 0;
+    background-color: #242331;
+    width: 100%;
+}
+.footer-1 h1, .footer-1 h4 {
+    color: white;
+    text-align: center;
+}
+.footer-1 h1 {
+    margin-bottom: 0;
+
+}
+.footer-1 h4 {
+    margin-top:0;
+    margin-bottom: 0;
+}
+.footer-2 {
+    width: 85%;
+    margin: 20px auto 0 auto;
+}
+.footer-2 p {
+    text-align: center;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 830px ) {
+    .nav-items {
+        justify-content: space-between;
+    }
+    .menu-button {
+        display: block;
+    }
+    .max-items {
+        display: none;
+    }
+    .small-logo {
+        display: block;
+    }
+    .logo-item {
+        display: none;
+    }
+    .news-container .box {
+        width: 90%;
+    }
+    .dicontainer {
+        display: block;
+    }
+    .dfirst, .dsecond {
+        width: 100%;
+    }
+    .container-2 {
+        width: 95%;
+        margin: auto;
+    }
+    .subcont {
+        width: 46%;
+
+    }
+    .rec {
+        width: 40%;
+    }
+    
+}
+@media screen and (min-width: 830px) {
+    .menu-button, .close-button, .side-bar-container {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 667px) {
+    .image-container {
+        flex-direction: column;
+
+    }
+    .sub-container {
+        margin: 5px auto 5px auto;
+        width: 93%;
+    }
+    .news-container {
+        flex-direction: column;
+
+    }
+    .news-container .box {
+        width: 90%;
+        margin: 0 auto 5px auto;
+    }
+    .container-2 {
+        width: 80%;
+        margin: auto;
+    }
+    .subcont {
+        width: 100%;
+
+    }
+    .no-container-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rec {
+        width: 70%;
+
+    }
+}
